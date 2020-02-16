@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "ext": "ts",
+  "exec": "ts-node -r tsconfig-paths/register --project tsconfig.dev.json src/server.ts",
+  "env": {
+    "DEBUG": "Sweetie:*",
+    "PORT": 3010
+  },
+  "watch": ["src/server.ts"]
+}
