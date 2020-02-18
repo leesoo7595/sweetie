@@ -157,3 +157,9 @@ modules.xml
 
 # next
 .next
+
+# env
+
+.env
+
+data.json

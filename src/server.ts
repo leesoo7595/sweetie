@@ -23,7 +23,7 @@ app.prepare().then(() => {
     const server = express();
 
     server.get('/home', (req, res) => {
-        log('get', req.route)
+        log('get', req.route);
         return app.render(req, res, '/Home', req.query);
     });
 

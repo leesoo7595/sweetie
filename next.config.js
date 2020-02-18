@@ -1,5 +1,6 @@
-const withSass = require('@zeit/next-sass')
+const withSass = require('@zeit/next-sass');
 const TsconfigPathsWebpackPlugin = require('tsconfig-paths-webpack-plugin');
+require('dotenv').config();
 
 module.exports = withSass({
   cssModules: true,
@@ -10,5 +11,8 @@ module.exports = withSass({
   webpack: (config) => {
     config.resolve.plugins.push(new TsconfigPathsWebpackPlugin());
     return config;
+  },
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL,
   }
 });
